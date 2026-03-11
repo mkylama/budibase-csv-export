@@ -33,6 +33,10 @@
             "type": "string",
             "title": "Bucket"
           },
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
           "accessKey": {
             "type": "string",
             "title": "Access Key"

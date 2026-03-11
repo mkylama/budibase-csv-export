@@ -13,7 +13,7 @@ import stream from 'node:stream';
 import { v4 as uuidv4 } from 'uuid';
 
 function validateInputs(inputs: Record<string, any>) {
-    const { tableId, query, region, endpoint, bucket, accessKey, secret, budibaseApiUrl, budibaseApiKey } = inputs;
+    const { tableId, query, region, endpoint, bucket, key, accessKey, secret, budibaseApiUrl, budibaseApiKey } = inputs;
 
     if (!tableId) {
         throw new Error('You must select a table to query.');
@@ -25,6 +25,10 @@ function validateInputs(inputs: Record<string, any>) {
 
     if (!bucket) {
         throw new Error('Bucket is mandatory');
+    }
+
+    if (!key) {
+        throw new Error('Key is mandatory');
     }
 
     if (!accessKey) {
@@ -94,9 +98,7 @@ export default async function run({ inputs, appId }: AutomationStepInput) {
         };
     }
 
-    const { tableId, query, region, endpoint, bucket, accessKey, secret, budibaseApiUrl, budibaseApiKey } = inputs;
-
-    const key = `${uuidv4()}.csv`;
+    const { tableId, query, region, endpoint, bucket, key, accessKey, secret, budibaseApiUrl, budibaseApiKey } = inputs;
 
     const s3 = new S3({
         region,
