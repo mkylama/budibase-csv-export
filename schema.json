@@ -2,7 +2,7 @@
   "type": "automation",
   "metadata": {},
   "schema": {
-    "name": "csv-export",
+    "name": "csv-export-custom",
     "tagline": "CSV Export Automation Step",
     "icon": "Export",
     "description": "CSV Export",
