@@ -1,6 +1,6 @@
 {
-  "name": "csv-export",
-  "version": "1.0.0",
+  "name": "csv-export-custom",
+  "version": "1.1.0",
   "description": "CSV Export Automation Step",
   "main": "src/index.ts",
   "license": "MIT",
