@@ -7,7 +7,7 @@
     "icon": "Export",
     "description": "CSV Export",
     "type": "action",
-    "stepId": "10fc96d1-6336-44d9-be1b-0af35d24e194",
+    "stepId": "31085253-4c5d-4f9e-87cb-8280079714d7",
     "schema": {
       "inputs": {
         "properties": {
